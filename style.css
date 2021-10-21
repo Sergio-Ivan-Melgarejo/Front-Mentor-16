@@ -1,0 +1,144 @@
+:root{
+/* ### Primary */
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+/* ### Neutral */
+--Very-Dark-Blue: hsl(234, 12%, 34%);
+--Grayish-Blue: hsl(229, 6%, 66%);
+--Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+Body{
+    Font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background: var(--Very-Light-Gray);
+}
+
+.container{
+    min-width: 350px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.container__one{
+    padding: 30px 25px 0;
+    text-align: center;
+}
+
+.container__h1{
+    font-size: 1.7em;
+    font-weight: 200;
+    line-height: 1.6em;
+    color: var(--Grayish-Blue);
+}
+
+.container__h1-span{
+    font-weight: 600;
+    color: var(--Very-Dark-Blue);
+}
+
+.container__p{
+    color: var(--Grayish-Blue);
+    line-height: 1.7em;
+    font-size: 1.1em;
+    padding: 20px 0;
+}
+
+.container__two{
+    padding: 25px;
+}
+
+.card{
+    background: #fff;
+    min-width: 300px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.100);
+    border-radius: 5px;
+    border-top: solid 3px var(--Cyan);
+    height: 250px;
+    position: relative;
+}
+
+.card-2{
+    border-top: solid 3px var(--Red);
+}
+
+.card-3{
+    border-top: solid 3px var(--Orange);
+}
+
+.card-4{
+    border-top: solid 3px var(--Blue);
+}
+
+.card__h2{
+    color: var(--Very-Dark-Blue);
+}
+
+.card__p{
+    color: var(--Grayish-Blue);
+    padding: 10px 0 20px;
+}
+
+.card__img{
+    width: 20%;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+    padding: 20px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 1000px){
+    .container{
+        max-width: 1600px;
+    }
+    .container__one{
+        width: 550px;
+        margin: auto;
+    }
+    .container__two{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        width: 1000px;
+        margin: auto;
+        gap: 20px;
+    }
+    .card{
+        margin: 0;
+    }
+    .card-1{
+        grid-area: 2/1/4/3;
+    }
+    .card-2{
+        grid-area: 1/3/3/5;
+    }
+    .card-3{
+        grid-area: 3/3/5/5;
+    }
+    .card-4{
+        grid-area: 2/5/4/7;
+    }
+    .container__h1{
+        font-size: 2.2em;
+    }
+}
